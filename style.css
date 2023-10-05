@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--Cream);
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.prodact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+    margin: 1rem;
+
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.proudact-contnt {
+    background-color: var(--White);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 2rem;
+}
+
+.proudact-contnt .head {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: var(--Dark-blue);
+    text-transform: uppercase;
+}
+
+.proudact-contnt h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 23px;
+    margin: 20px 0;
+    line-height: 1;
+}
+
+.proudact-contnt p {
+    font-size: 14px;
+    color: var(--Dark-blue);
+    line-height: 1.6;
+}
+
+
+.priace {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.priace .orignal-priace {
+    font-family: 'Fraunces', serif;
+    font-size: 29px;
+    color: var(--Dark-cyan);
+    margin-right: 20px;
+}
+
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    border: none;
+    background-color: var(--Dark-cyan);
+    border-radius: 8px;
+    color: white;
+    width: 100%;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button::before {
+    content: "";
+    background: url("./images/icon-cart.svg");
+    width: 15px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+
+
+
+@media (max-width: 700px) {
+    .prodact {
+        grid-template-columns: 1fr;
+    }
+
+    img {
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+
+    .proudact-contnt {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+}
